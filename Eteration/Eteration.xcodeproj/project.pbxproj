@@ -25,6 +25,9 @@
 		77B204972B6CDCF500F88CC7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B204962B6CDCF500F88CC7 /* TabBarViewController.swift */; };
 		77B204992B6CDDB700F88CC7 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B204982B6CDDB600F88CC7 /* FavoriteViewController.swift */; };
 		77B2049B2B6CDDC100F88CC7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B2049A2B6CDDC100F88CC7 /* ProfileViewController.swift */; };
+		77B2049D2B6D0E0A00F88CC7 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B2049C2B6D0E0A00F88CC7 /* ProductService.swift */; };
+		77B2049F2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B2049E2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift */; };
+		77B204A22B6D0FCE00F88CC7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 77B204A12B6D0FCE00F88CC7 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,8 @@
 		77B204962B6CDCF500F88CC7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		77B204982B6CDDB600F88CC7 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		77B2049A2B6CDDC100F88CC7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		77B2049C2B6D0E0A00F88CC7 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		77B2049E2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B204A22B6D0FCE00F88CC7 /* SDWebImage in Frameworks */,
 				77B2048F2B6CD8A900F88CC7 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +178,7 @@
 				77B2049A2B6CDDC100F88CC7 /* ProfileViewController.swift */,
 				77B204902B6CDCC300F88CC7 /* DetailViewController.swift */,
 				77B204922B6CDCCC00F88CC7 /* FilterViewController.swift */,
+				77B2049E2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +188,7 @@
 			children = (
 				77B2044F2B6CD1DE00F88CC7 /* AppDelegate.swift */,
 				77B204512B6CD1DE00F88CC7 /* SceneDelegate.swift */,
+				77B2049C2B6D0E0A00F88CC7 /* ProductService.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 			name = Eteration;
 			packageProductDependencies = (
 				77B2048E2B6CD8A900F88CC7 /* SnapKit */,
+				77B204A12B6D0FCE00F88CC7 /* SDWebImage */,
 			);
 			productName = Eteration;
 			productReference = 77B2044C2B6CD1DE00F88CC7 /* Eteration.app */;
@@ -278,6 +287,7 @@
 			mainGroup = 77B204432B6CD1DE00F88CC7;
 			packageReferences = (
 				77B2048D2B6CD8A900F88CC7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				77B204A02B6D0FCE00F88CC7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 77B2044D2B6CD1DE00F88CC7 /* Products */;
 			projectDirPath = "";
@@ -323,10 +333,12 @@
 			files = (
 				77B204992B6CDDB700F88CC7 /* FavoriteViewController.swift in Sources */,
 				77B2045A2B6CD1DE00F88CC7 /* Eteration.xcdatamodeld in Sources */,
+				77B2049F2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift in Sources */,
 				77B204892B6CD2B800F88CC7 /* HomeModel.swift in Sources */,
 				77B204932B6CDCCC00F88CC7 /* FilterViewController.swift in Sources */,
 				77B204502B6CD1DE00F88CC7 /* AppDelegate.swift in Sources */,
 				77B204872B6CD29800F88CC7 /* HomeViewModel.swift in Sources */,
+				77B2049D2B6D0E0A00F88CC7 /* ProductService.swift in Sources */,
 				77B2049B2B6CDDC100F88CC7 /* ProfileViewController.swift in Sources */,
 				77B204952B6CDCDC00F88CC7 /* CardViewController.swift in Sources */,
 				77B204522B6CD1DE00F88CC7 /* SceneDelegate.swift in Sources */,
@@ -675,6 +687,14 @@
 				minimumVersion = 5.7.0;
 			};
 		};
+		77B204A02B6D0FCE00F88CC7 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.10;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -682,6 +702,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 77B2048D2B6CD8A900F88CC7 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		77B204A12B6D0FCE00F88CC7 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77B204A02B6D0FCE00F88CC7 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 
