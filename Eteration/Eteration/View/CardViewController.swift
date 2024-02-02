@@ -1,17 +1,16 @@
 //
-//  HomeViewController.swift
+//  CardViewController.swift
 //  Eteration
 //
 //  Created by Onur on 2.02.2024.
 //
 
 import UIKit
-import SnapKit
 
-class HomeViewController: UIViewController {
+class CardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .systemPink
+        self.view.backgroundColor = .blue
     }
 }
