@@ -64,8 +64,6 @@ class ProductCollectionViewCell: UICollectionViewCell {
             make.top.equalTo(priceLabel.snp.bottom).offset(8)
             make.leading.trailing.equalToSuperview()
         }
-        
-     
     }
     
     func configure(with model: HomeModel) {

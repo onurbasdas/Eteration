@@ -28,6 +28,7 @@
 		77B2049D2B6D0E0A00F88CC7 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B2049C2B6D0E0A00F88CC7 /* ProductService.swift */; };
 		77B2049F2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B2049E2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift */; };
 		77B204A22B6D0FCE00F88CC7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 77B204A12B6D0FCE00F88CC7 /* SDWebImage */; };
+		77B204A52B6D15F100F88CC7 /* UIScrollView_InfiniteScroll in Frameworks */ = {isa = PBXBuildFile; productRef = 77B204A42B6D15F100F88CC7 /* UIScrollView_InfiniteScroll */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B204A52B6D15F100F88CC7 /* UIScrollView_InfiniteScroll in Frameworks */,
 				77B204A22B6D0FCE00F88CC7 /* SDWebImage in Frameworks */,
 				77B2048F2B6CD8A900F88CC7 /* SnapKit in Frameworks */,
 			);
@@ -173,10 +175,10 @@
 			children = (
 				77B204962B6CDCF500F88CC7 /* TabBarViewController.swift */,
 				77B2048A2B6CD35700F88CC7 /* HomeViewController.swift */,
+				77B204902B6CDCC300F88CC7 /* DetailViewController.swift */,
 				77B204942B6CDCDC00F88CC7 /* CardViewController.swift */,
 				77B204982B6CDDB600F88CC7 /* FavoriteViewController.swift */,
 				77B2049A2B6CDDC100F88CC7 /* ProfileViewController.swift */,
-				77B204902B6CDCC300F88CC7 /* DetailViewController.swift */,
 				77B204922B6CDCCC00F88CC7 /* FilterViewController.swift */,
 				77B2049E2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift */,
 			);
@@ -212,6 +214,7 @@
 			packageProductDependencies = (
 				77B2048E2B6CD8A900F88CC7 /* SnapKit */,
 				77B204A12B6D0FCE00F88CC7 /* SDWebImage */,
+				77B204A42B6D15F100F88CC7 /* UIScrollView_InfiniteScroll */,
 			);
 			productName = Eteration;
 			productReference = 77B2044C2B6CD1DE00F88CC7 /* Eteration.app */;
@@ -288,6 +291,7 @@
 			packageReferences = (
 				77B2048D2B6CD8A900F88CC7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				77B204A02B6D0FCE00F88CC7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				77B204A32B6D15F100F88CC7 /* XCRemoteSwiftPackageReference "UIScrollView-InfiniteScroll" */,
 			);
 			productRefGroup = 77B2044D2B6CD1DE00F88CC7 /* Products */;
 			projectDirPath = "";
@@ -695,6 +699,14 @@
 				minimumVersion = 5.18.10;
 			};
 		};
+		77B204A32B6D15F100F88CC7 /* XCRemoteSwiftPackageReference "UIScrollView-InfiniteScroll" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pronebird/UIScrollView-InfiniteScroll";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -707,6 +719,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 77B204A02B6D0FCE00F88CC7 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		77B204A42B6D15F100F88CC7 /* UIScrollView_InfiniteScroll */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77B204A32B6D15F100F88CC7 /* XCRemoteSwiftPackageReference "UIScrollView-InfiniteScroll" */;
+			productName = UIScrollView_InfiniteScroll;
 		};
 /* End XCSwiftPackageProductDependency section */
 

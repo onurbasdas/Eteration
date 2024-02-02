@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import UIScrollView_InfiniteScroll
 
 class HomeViewController: UIViewController {
     
@@ -49,18 +50,32 @@ class HomeViewController: UIViewController {
     }()
     
     var homeViewModel = HomeViewModel()
+    var isLoading = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        fetchData()
+        fetchMoreData()
+        setupInfiniteScroll()
     }
     
-    func fetchData() {
-        homeViewModel.fetchProducts { [weak self] in
+    func fetchMoreData() {
+        homeViewModel.fetchMoreProducts { [weak self] in
             guard let self = self else { return }
+            self.isLoading = false
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
+                self.collectionView.finishInfiniteScroll()
+            }
+        }
+    }
+    
+    func setupInfiniteScroll() {
+        collectionView.addInfiniteScroll { [weak self] collectionView in
+            guard let self = self else { return }
+            if !self.isLoading {
+                self.isLoading = true
+                self.fetchMoreData()
             }
         }
     }
@@ -97,7 +112,6 @@ class HomeViewController: UIViewController {
     }
 }
 
-
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return homeViewModel.homeModels.count
@@ -127,5 +141,18 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedProduct = homeViewModel.homeModels[indexPath.item]
+        navigateToProductDetail(selectedProduct)
+    }
+}
+
+extension HomeViewController {
+    func navigateToProductDetail(_ selectedProduct: HomeModel) {
+        let productDetailVC = DetailViewController()
+        productDetailVC.selectedProduct = selectedProduct
+        navigationController?.pushViewController(productDetailVC, animated: true)
     }
 }

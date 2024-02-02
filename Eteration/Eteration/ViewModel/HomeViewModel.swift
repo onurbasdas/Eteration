@@ -13,10 +13,13 @@ class HomeViewModel {
     
     var homeModels: [HomeModel] = []
     
-    func fetchProducts(completion: @escaping () -> Void) {
-        productService.fetchProducts { [weak self] (products) in
-            guard let self = self, let products = products else { return }
-            self.homeModels = products
+    func fetchMoreProducts(completion: @escaping () -> Void) {
+        productService.fetchMoreProducts { [weak self] (newProducts) in
+            guard let self = self, let newProducts = newProducts else {
+                completion()
+                return
+            }
+            self.homeModels.append(contentsOf: newProducts)
             completion()
         }
     }
