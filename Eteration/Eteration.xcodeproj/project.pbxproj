@@ -21,7 +21,7 @@
 		77B2048F2B6CD8A900F88CC7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 77B2048E2B6CD8A900F88CC7 /* SnapKit */; };
 		77B204912B6CDCC300F88CC7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B204902B6CDCC300F88CC7 /* DetailViewController.swift */; };
 		77B204932B6CDCCC00F88CC7 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B204922B6CDCCC00F88CC7 /* FilterViewController.swift */; };
-		77B204952B6CDCDC00F88CC7 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B204942B6CDCDC00F88CC7 /* CardViewController.swift */; };
+		77B204952B6CDCDC00F88CC7 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B204942B6CDCDC00F88CC7 /* CartViewController.swift */; };
 		77B204972B6CDCF500F88CC7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B204962B6CDCF500F88CC7 /* TabBarViewController.swift */; };
 		77B204992B6CDDB700F88CC7 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B204982B6CDDB600F88CC7 /* FavoriteViewController.swift */; };
 		77B2049B2B6CDDC100F88CC7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B2049A2B6CDDC100F88CC7 /* ProfileViewController.swift */; };
@@ -29,6 +29,10 @@
 		77B2049F2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B2049E2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift */; };
 		77B204A22B6D0FCE00F88CC7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 77B204A12B6D0FCE00F88CC7 /* SDWebImage */; };
 		77B204A52B6D15F100F88CC7 /* UIScrollView_InfiniteScroll in Frameworks */ = {isa = PBXBuildFile; productRef = 77B204A42B6D15F100F88CC7 /* UIScrollView_InfiniteScroll */; };
+		77C694C72B6E4BB100536F50 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C694C62B6E4BB100536F50 /* CoreData.framework */; };
+		77C694CA2B6E52AF00536F50 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C694C92B6E52AF00536F50 /* CartManager.swift */; };
+		77C694CC2B6E536C00536F50 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C694CB2B6E536C00536F50 /* Extensions.swift */; };
+		77C694CE2B6E55F400536F50 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C694CD2B6E55F400536F50 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,12 +70,16 @@
 		77B2048A2B6CD35700F88CC7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		77B204902B6CDCC300F88CC7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		77B204922B6CDCCC00F88CC7 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
-		77B204942B6CDCDC00F88CC7 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		77B204942B6CDCDC00F88CC7 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		77B204962B6CDCF500F88CC7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		77B204982B6CDDB600F88CC7 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		77B2049A2B6CDDC100F88CC7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		77B2049C2B6D0E0A00F88CC7 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		77B2049E2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		77C694C62B6E4BB100536F50 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		77C694C92B6E52AF00536F50 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		77C694CB2B6E536C00536F50 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		77C694CD2B6E55F400536F50 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77C694C72B6E4BB100536F50 /* CoreData.framework in Frameworks */,
 				77B204A52B6D15F100F88CC7 /* UIScrollView_InfiniteScroll in Frameworks */,
 				77B204A22B6D0FCE00F88CC7 /* SDWebImage in Frameworks */,
 				77B2048F2B6CD8A900F88CC7 /* SnapKit in Frameworks */,
@@ -102,6 +111,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7717B9622B6F8D650003C5D4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				77B204962B6CDCF500F88CC7 /* TabBarViewController.swift */,
+				77C694CD2B6E55F400536F50 /* BaseViewController.swift */,
+				77AB78342B6D74CD002310F6 /* Screen */,
+				77B204902B6CDCC300F88CC7 /* DetailViewController.swift */,
+				77B204922B6CDCCC00F88CC7 /* FilterViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		77AB78312B6D749B002310F6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				77B2049E2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		77AB78342B6D74CD002310F6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				77B2048A2B6CD35700F88CC7 /* HomeViewController.swift */,
+				77B204942B6CDCDC00F88CC7 /* CartViewController.swift */,
+				77B204982B6CDDB600F88CC7 /* FavoriteViewController.swift */,
+				77B2049A2B6CDDC100F88CC7 /* ProfileViewController.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		77B204432B6CD1DE00F88CC7 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +149,7 @@
 				77B204682B6CD1E300F88CC7 /* EterationTests */,
 				77B204722B6CD1E300F88CC7 /* EterationUITests */,
 				77B2044D2B6CD1DE00F88CC7 /* Products */,
+				77C694C52B6E4BB000536F50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,14 +214,8 @@
 		77B204842B6CD26900F88CC7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				77B204962B6CDCF500F88CC7 /* TabBarViewController.swift */,
-				77B2048A2B6CD35700F88CC7 /* HomeViewController.swift */,
-				77B204902B6CDCC300F88CC7 /* DetailViewController.swift */,
-				77B204942B6CDCDC00F88CC7 /* CardViewController.swift */,
-				77B204982B6CDDB600F88CC7 /* FavoriteViewController.swift */,
-				77B2049A2B6CDDC100F88CC7 /* ProfileViewController.swift */,
-				77B204922B6CDCCC00F88CC7 /* FilterViewController.swift */,
-				77B2049E2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift */,
+				7717B9622B6F8D650003C5D4 /* ViewController */,
+				77AB78312B6D749B002310F6 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,11 +223,29 @@
 		77B204852B6CD26F00F88CC7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				77C694C82B6E52A700536F50 /* Managers */,
 				77B2044F2B6CD1DE00F88CC7 /* AppDelegate.swift */,
 				77B204512B6CD1DE00F88CC7 /* SceneDelegate.swift */,
 				77B2049C2B6D0E0A00F88CC7 /* ProductService.swift */,
+				77C694CB2B6E536C00536F50 /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		77C694C52B6E4BB000536F50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77C694C62B6E4BB100536F50 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77C694C82B6E52A700536F50 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				77C694C92B6E52AF00536F50 /* CartManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,17 +389,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				77B204992B6CDDB700F88CC7 /* FavoriteViewController.swift in Sources */,
+				77C694CA2B6E52AF00536F50 /* CartManager.swift in Sources */,
 				77B2045A2B6CD1DE00F88CC7 /* Eteration.xcdatamodeld in Sources */,
 				77B2049F2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift in Sources */,
 				77B204892B6CD2B800F88CC7 /* HomeModel.swift in Sources */,
+				77C694CE2B6E55F400536F50 /* BaseViewController.swift in Sources */,
 				77B204932B6CDCCC00F88CC7 /* FilterViewController.swift in Sources */,
 				77B204502B6CD1DE00F88CC7 /* AppDelegate.swift in Sources */,
 				77B204872B6CD29800F88CC7 /* HomeViewModel.swift in Sources */,
 				77B2049D2B6D0E0A00F88CC7 /* ProductService.swift in Sources */,
 				77B2049B2B6CDDC100F88CC7 /* ProfileViewController.swift in Sources */,
-				77B204952B6CDCDC00F88CC7 /* CardViewController.swift in Sources */,
+				77B204952B6CDCDC00F88CC7 /* CartViewController.swift in Sources */,
 				77B204522B6CD1DE00F88CC7 /* SceneDelegate.swift in Sources */,
 				77B2048B2B6CD35700F88CC7 /* HomeViewController.swift in Sources */,
+				77C694CC2B6E536C00536F50 /* Extensions.swift in Sources */,
 				77B204972B6CDCF500F88CC7 /* TabBarViewController.swift in Sources */,
 				77B204912B6CDCC300F88CC7 /* DetailViewController.swift in Sources */,
 			);

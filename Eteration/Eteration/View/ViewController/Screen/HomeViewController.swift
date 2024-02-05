@@ -9,8 +9,8 @@ import UIKit
 import SnapKit
 import UIScrollView_InfiniteScroll
 
-class HomeViewController: UIViewController {
-    
+class HomeViewController: BaseViewController {
+ 
     lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "Search"
@@ -35,6 +35,7 @@ class HomeViewController: UIViewController {
         let stackView = UIStackView(arrangedSubviews: [filterLabel, filterButton])
         stackView.axis = .horizontal
         stackView.spacing = 8
+        stackView.backgroundColor = .white
         return stackView
     }()
     
@@ -42,7 +43,7 @@ class HomeViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .clear
+        collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
@@ -81,7 +82,8 @@ class HomeViewController: UIViewController {
     }
     
     func setupUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(named: "BgColor")
+        self.navigationItem.title = "E-Market"
         
         // Add SearchBar
         view.addSubview(searchBar)
@@ -112,6 +114,25 @@ class HomeViewController: UIViewController {
     }
 }
 
+extension HomeViewController: ProductCollectionViewCellDelegate {
+    func didSelectFavorite(cell: ProductCollectionViewCell) {
+        if let indexPath = collectionView.indexPath(for: cell) {
+            let selectedProduct = homeViewModel.homeModels[indexPath.row]
+            let isInCart = CartManager.shared.isProductInCart( homeViewModel.homeModels[indexPath.row])
+            if isInCart {
+                CartManager.shared.removeFromCart(item: selectedProduct)
+                showAlert(message: "Product removed from cart!")
+                cell.addToCartButton.titleLabel?.text = "Add to Card"
+            } else {
+                CartManager.shared.addToCart(item: selectedProduct)
+                showAlert(message: "Product added to cart!")
+                cell.addToCartButton.titleLabel?.text = "Remove to Card"
+            }
+        }
+        self.collectionView.reloadData()
+    }
+}
+
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return homeViewModel.homeModels.count
@@ -122,9 +143,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
             return UICollectionViewCell()
         }
         let model = homeViewModel.homeModels[indexPath.item]
+        cell.delegate = self
         cell.configure(with: model)
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
         return cell
     }
     
@@ -136,7 +156,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        return UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

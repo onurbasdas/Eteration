@@ -16,7 +16,7 @@ class TabBarController: UITabBarController {
     
     private func initilazeView() {
         let homeVC = HomeViewController()
-        let cardVC = CardViewController()
+        let cardVC = CartViewController()
         let favoriteVC = FavoriteViewController()
         let profileVC = ProfileViewController()
         
