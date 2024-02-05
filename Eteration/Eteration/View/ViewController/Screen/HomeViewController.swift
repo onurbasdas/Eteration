@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import UIScrollView_InfiniteScroll
+import CoreData
 
 class HomeViewController: BaseViewController {
  
@@ -116,6 +117,10 @@ class HomeViewController: BaseViewController {
 
 extension HomeViewController: ProductCollectionViewCellDelegate {
     func didSelectFavorite(cell: ProductCollectionViewCell) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let addCart = NSEntityDescription.insertNewObject(forEntityName: "Eteration", into: context)
+        
         if let indexPath = collectionView.indexPath(for: cell) {
             let selectedProduct = homeViewModel.homeModels[indexPath.row]
             let isInCart = CartManager.shared.isProductInCart( homeViewModel.homeModels[indexPath.row])
@@ -124,10 +129,24 @@ extension HomeViewController: ProductCollectionViewCellDelegate {
                 showAlert(message: "Product removed from cart!")
                 cell.addToCartButton.titleLabel?.text = "Add to Card"
             } else {
+                
                 CartManager.shared.addToCart(item: selectedProduct)
+                addCart.setValue(selectedProduct.image, forKey: "image")
+                addCart.setValue(selectedProduct.price, forKey: "price")
+                addCart.setValue(selectedProduct.name, forKey: "name")
+                addCart.setValue(selectedProduct.description, forKey: "desc")
+                addCart.setValue(UUID(), forKey: "id")
+                
+                do {
+                    try context.save()
+                    print("succes")
+                } catch {
+                    print("Error")
+                }
                 showAlert(message: "Product added to cart!")
                 cell.addToCartButton.titleLabel?.text = "Remove to Card"
             }
+            NotificationCenter.default.post(name: NSNotification.Name("newData"), object: nil)
         }
         self.collectionView.reloadData()
     }

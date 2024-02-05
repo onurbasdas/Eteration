@@ -33,6 +33,8 @@
 		77C694CA2B6E52AF00536F50 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C694C92B6E52AF00536F50 /* CartManager.swift */; };
 		77C694CC2B6E536C00536F50 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C694CB2B6E536C00536F50 /* Extensions.swift */; };
 		77C694CE2B6E55F400536F50 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C694CD2B6E55F400536F50 /* BaseViewController.swift */; };
+		77CE48992B70CE9F00C17D28 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CE48982B70CE9F00C17D28 /* ProductTableViewCell.swift */; };
+		77CE489B2B71009100C17D28 /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CE489A2B71009100C17D28 /* CartModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		77C694C92B6E52AF00536F50 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		77C694CB2B6E536C00536F50 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		77C694CD2B6E55F400536F50 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		77CE48982B70CE9F00C17D28 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		77CE489A2B71009100C17D28 /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				77B2049E2B6D0F5400F88CC7 /* ProductCollectionViewCell.swift */,
+				77CE48982B70CE9F00C17D28 /* ProductTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				77B204882B6CD2B800F88CC7 /* HomeModel.swift */,
+				77CE489A2B71009100C17D28 /* CartModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,8 +403,10 @@
 				77B204932B6CDCCC00F88CC7 /* FilterViewController.swift in Sources */,
 				77B204502B6CD1DE00F88CC7 /* AppDelegate.swift in Sources */,
 				77B204872B6CD29800F88CC7 /* HomeViewModel.swift in Sources */,
+				77CE489B2B71009100C17D28 /* CartModel.swift in Sources */,
 				77B2049D2B6D0E0A00F88CC7 /* ProductService.swift in Sources */,
 				77B2049B2B6CDDC100F88CC7 /* ProfileViewController.swift in Sources */,
+				77CE48992B70CE9F00C17D28 /* ProductTableViewCell.swift in Sources */,
 				77B204952B6CDCDC00F88CC7 /* CartViewController.swift in Sources */,
 				77B204522B6CD1DE00F88CC7 /* SceneDelegate.swift in Sources */,
 				77B2048B2B6CD35700F88CC7 /* HomeViewController.swift in Sources */,
