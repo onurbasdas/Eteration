@@ -121,6 +121,7 @@ extension HomeViewController: ProductCollectionViewCellDelegate {
         let context = appDelegate.persistentContainer.viewContext
         let addCart = NSEntityDescription.insertNewObject(forEntityName: "Eteration", into: context)
         
+        
         if let indexPath = collectionView.indexPath(for: cell) {
             let selectedProduct = homeViewModel.homeModels[indexPath.row]
             let isInCart = CartManager.shared.isProductInCart( homeViewModel.homeModels[indexPath.row])
